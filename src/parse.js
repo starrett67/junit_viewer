@@ -94,9 +94,9 @@ function updateTest (test, testReults, type) {
       test.messages.values.push({
         value: testReult._
       })
-    } else if (testReult.hasOwnProperty('$') && testReult.$.hasOwnProperty('message')) {
+    } if (testReult.hasOwnProperty('$') && testReult.$.hasOwnProperty('message')) {
       test.messages.message = testReult.$.message
-    } else if (testReult.hasOwnProperty('$') && testReult.$.hasOwnProperty('type')) {
+    } if (testReult.hasOwnProperty('$') && testReult.$.hasOwnProperty('type')) {
       test.messages.values.push({
         value: testReult.$.type
       })
